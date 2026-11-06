@@ -640,11 +640,10 @@ ul {
   display: block;
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
 }
 
 .hero-avatar:hover img {
-  transform: scale(1.01);
+  transform: none;
 }
 
 @keyframes rotateAroundImage {
