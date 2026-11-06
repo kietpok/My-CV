@@ -1212,15 +1212,68 @@ ul {
   width: 100%;
   box-sizing: border-box;
   padding: 0.6rem 0.75rem;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  border-radius: 8px;
+  border: 1.5px solid rgba(148, 163, 184, 0.5);
+  border-radius: 10px;
   outline: none;
   color: inherit;
   background: rgba(2, 6, 23, 0.6);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== HIỆU ỨNG PHỔ QUANG (HOLOGRAPHIC) KHI DI CHUỘT VÀO ===== */
+/* Cách làm: bọc gradient nhiều màu bằng 2 lớp nền (mô phỏng viền gradient)
+   và cho góc xoay chuyển động liên tục → ánh màu nhìn như đĩa CD */
+.login-form input[type="email"] {
+  /* lớp trong: nền tối của ô nhập */
+  background:
+    linear-gradient(rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.92)) padding-box,
+    conic-gradient(from var(--holo-angle, 0deg),
+      #ff0080, #ff8c00, #ffee00, #00ff9d, #00cfff, #8a2be2, #ff0080) border-box;
+  border: 1.5px solid transparent;
+}
+
+@property --holo-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes holo-spin {
+  to { --holo-angle: 360deg; }
+}
+
+.login-form input[type="email"]:hover,
+.login-form input[type="email"]:focus {
+  animation: holo-spin 3.5s linear infinite;
+  box-shadow:
+    0 0 12px rgba(255, 0, 128, 0.35),
+    0 0 24px rgba(0, 207, 255, 0.3),
+    0 0 40px rgba(138, 43, 226, 0.25);
+}
+
+/* Khi hover/nhập hợp lệ vẫn giữ ánh phổ quang, chỉ đổi màu glow */
+.login-form input[type="email"]:hover:valid,
+.login-form input[type="email"]:focus:valid {
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.45),
+    0 0 28px rgba(0, 255, 157, 0.3);
 }
 
 .login-form input[type="email"]:focus {
-  border-color: #38bdf8;
+  border-color: transparent;
+}
+
+/* Fallback cho trình duyệt không hỗ trợ @property: dùng filter hue-rotate */
+@supports not (background: paint(x)) {
+  @keyframes holo-fallback {
+    0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  .login-form input[type="email"]:hover,
+  .login-form input[type="email"]:focus {
+    animation: holo-fallback 3s linear infinite;
+  }
 }
 
 .login-form input[type="email"]:valid {
