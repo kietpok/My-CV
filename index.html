@@ -103,7 +103,14 @@
         <div class="hero-text">
           <p class="eyebrow">Xin chào, tôi là</p>
           <h1 class="hero-title">Nguyễn Trần Quang Kiệt</h1>
-          <p class="hero-class">Số ĐT : 0329 529 008 </p>
+          <p class="hero-class">
+            <!-- Icon điện thoại màu xanh lá neon + chữ số điện thoại phổ quang -->
+            <svg class="phone-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+              <path fill="#22FF88" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/>
+            </svg>
+            <span class="phone-label">Số ĐT :</span>
+            <a class="phone-number" href="tel:0329529008">0329 529 008</a>
+          </p>
           <p class="hero-role">Frontend Developer &amp; UI Enthusiast</p>
           <p class="hero-desc">
             Tôi xây dựng giao diện web sạch sẽ, dễ tiếp cận và responsive.
@@ -114,6 +121,24 @@
             <a class="btn btn-primary" href="#projects">Xem dự án</a>
             <a class="btn btn-outline" href="#contact">Liên hệ tôi</a>
           </div>
+          <!-- Hàng badge trang trí: icon nhiều màu phổ quang -->
+          <ul class="hero-badges" aria-label="Điểm nổi bật">
+            <li class="hero-badge badge-1">
+              <!-- Icon sao màu vàng gold -->
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="#FFD700" d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              Sẵn sàng thực tập
+            </li>
+            <li class="hero-badge badge-2">
+              <!-- Icon tia chớp màu cyan -->
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="#00E5FF" d="M13 2L4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2z"/></svg>
+              Học nhanh · Làm chắc
+            </li>
+            <li class="hero-badge badge-3">
+              <!-- Icon tim màu hồng -->
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="#FF4D9D" d="M12 21s-8-4.8-8-10.4C4 7 6.2 5 8.8 5c1.5 0 2.7.7 3.2 1.7C12.5 5.7 13.7 5 15.2 5 17.8 5 20 7 20 10.6 20 16.2 12 21 12 21z"/></svg>
+              Yêu thích UI/UX
+            </li>
+          </ul>
         </div>
 
         <!-- Ảnh đại diện: dùng placeholder, thay bằng ảnh thật của bạn -->
@@ -122,6 +147,14 @@
             src="assets/img/3.jpg"
             alt="Ảnh đại diện của Nguyễn Trần Quang Kiệt"
             width="320" height="320" />
+          <!-- Vòng hào quang phổ quang trôi quanh avatar -->
+          <span class="avatar-orbit orbit-1" aria-hidden="true"></span>
+          <span class="avatar-orbit orbit-2" aria-hidden="true"></span>
+          <span class="avatar-orbit orbit-3" aria-hidden="true"></span>
+          <!-- Ba đốm sáng phổ quang viền quanh -->
+          <span class="avatar-spark spark-1" aria-hidden="true">✦</span>
+          <span class="avatar-spark spark-2" aria-hidden="true">✧</span>
+          <span class="avatar-spark spark-3" aria-hidden="true">✦</span>
         </figure>
       </div>
     </section>

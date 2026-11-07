@@ -17,6 +17,11 @@ Thay đổi lớn có thể bao gồm: bổ sung hoặc thay đổi chức năng
 
 ## Lịch sử thay đổi
 
+### 2026-11-07 - Bổ sung hệ thống icon phổ quang và trang trí hero
+- **Phạm vi:** `index.html`, `assets/css/styles.css`.
+- **Nội dung:** Thêm icon SVG màu thương hiệu cho các chip kỹ năng (HTML5, CSS3, JavaScript, Responsive, Git, Figma) và mục liên hệ (TikTok, Instagram, Facebook) với hiệu ứng glow khi hover; biến số điện thoại thành link `tel:` mang gradient phổ quang chạy liên tục kèm icon điện thoại neon nhấp nháy; thêm hàng badge trang trí nhiều màu dưới nút hero (sao vàng, tia chớp cyan, tim hồng); bổ sung vòng glow quang phổ trôi và đốm sáng ✦ nhấp nháy quanh ảnh đại diện.
+- **Kiểm tra:** Chụp ảnh xác minh bằng trình duyệt headless (0 lỗi console, 0 request thất bại); xác nhận hiển thị tại desktop.
+
 ### 2026-11-06 - Đổi màu nền ảnh 1 sang dải màu sáng quang phổ lăng kính (Prismatic Spectrum)
 - **Phạm vi:** `assets/css/styles.css`.
 - **Nội dung:** Thay thế dải đèn LED dạng hạt rời rạc bằng hiệu ứng màu sáng phổ quang (prismatic optical spectrum glow) mượt mà, bao gồm đầy đủ các dải bước sóng quang phổ ánh sáng nhìn thấy (Đỏ Ruby, Cam hổ phách, Vàng chanh, Lục bảo, Cyan neon, Lam điện, Tím huyền bí, Hồng cánh sen); bổ sung nền đệm kính tối hòa sắc quang phổ (`radial-gradient`), viền kính trắng mờ tinh tế và hiệu ứng tỏa hào quang đa tầng rực rỡ, sang trọng.
